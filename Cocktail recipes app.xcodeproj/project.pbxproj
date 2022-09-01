@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E48067B28C0D10F00D26695 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48067A28C0D10F00D26695 /* AppDelegate.swift */; };
+		8E48067D28C0D10F00D26695 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48067C28C0D10F00D26695 /* SceneDelegate.swift */; };
+		8E48068228C0D10F00D26695 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48068028C0D10F00D26695 /* Main.storyboard */; };
+		8E48068428C0D11000D26695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E48068328C0D11000D26695 /* Assets.xcassets */; };
+		8E48068728C0D11000D26695 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48068528C0D11000D26695 /* LaunchScreen.storyboard */; };
+		8E48068F28C0D40E00D26695 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48068E28C0D40E00D26695 /* AppCoordinator.swift */; };
+		8E48069128C0D5F900D26695 /* AppStartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069028C0D5F900D26695 /* AppStartCoordinator.swift */; };
+		8E48069328C0EA9800D26695 /* ReuseIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069228C0EA9800D26695 /* ReuseIdentifiers.swift */; };
+		8E48069528C0EABD00D26695 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069428C0EABD00D26695 /* UIStoryboardExtensions.swift */; };
+		8E48069728C0EAC700D26695 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069628C0EAC700D26695 /* UIViewController.swift */; };
+		8E48069928C0EACF00D26695 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069828C0EACF00D26695 /* UIView.swift */; };
+		8E48069C28C0EB1900D26695 /* ServiceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069B28C0EB1900D26695 /* ServiceHolder.swift */; };
+		8E48069E28C0ECE600D26695 /* AppStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069D28C0ECE600D26695 /* AppStartViewModel.swift */; };
+		8E4806A028C0ECF300D26695 /* AppStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069F28C0ECF300D26695 /* AppStartViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8E48067728C0D10F00D26695 /* Cocktail recipes app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cocktail recipes app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E48067A28C0D10F00D26695 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8E48067C28C0D10F00D26695 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8E48068128C0D10F00D26695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E48068328C0D11000D26695 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E48068628C0D11000D26695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E48068828C0D11000D26695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E48068E28C0D40E00D26695 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		8E48069028C0D5F900D26695 /* AppStartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartCoordinator.swift; sourceTree = "<group>"; };
+		8E48069228C0EA9800D26695 /* ReuseIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiers.swift; sourceTree = "<group>"; };
+		8E48069428C0EABD00D26695 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
+		8E48069628C0EAC700D26695 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		8E48069828C0EACF00D26695 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		8E48069B28C0EB1900D26695 /* ServiceHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceHolder.swift; sourceTree = "<group>"; };
+		8E48069D28C0ECE600D26695 /* AppStartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewModel.swift; sourceTree = "<group>"; };
+		8E48069F28C0ECF300D26695 /* AppStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E48067428C0D10F00D26695 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8E48066E28C0D10F00D26695 = {
+			isa = PBXGroup;
+			children = (
+				8E48067928C0D10F00D26695 /* Cocktail recipes app */,
+				8E48067828C0D10F00D26695 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8E48067828C0D10F00D26695 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E48067728C0D10F00D26695 /* Cocktail recipes app.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E48067928C0D10F00D26695 /* Cocktail recipes app */ = {
+			isa = PBXGroup;
+			children = (
+				8E48067A28C0D10F00D26695 /* AppDelegate.swift */,
+				8E48068E28C0D40E00D26695 /* AppCoordinator.swift */,
+				8E48067C28C0D10F00D26695 /* SceneDelegate.swift */,
+				8E4806A128C0ECF800D26695 /* StartingStaff */,
+				8E48068028C0D10F00D26695 /* Main.storyboard */,
+				8E48068328C0D11000D26695 /* Assets.xcassets */,
+				8E48068528C0D11000D26695 /* LaunchScreen.storyboard */,
+				8E48068828C0D11000D26695 /* Info.plist */,
+				8E4806A228C0ED0400D26695 /* Services */,
+				8E48069A28C0EAFA00D26695 /* Extensions */,
+			);
+			path = "Cocktail recipes app";
+			sourceTree = "<group>";
+		};
+		8E48069A28C0EAFA00D26695 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8E48069228C0EA9800D26695 /* ReuseIdentifiers.swift */,
+				8E48069428C0EABD00D26695 /* UIStoryboardExtensions.swift */,
+				8E48069628C0EAC700D26695 /* UIViewController.swift */,
+				8E48069828C0EACF00D26695 /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8E4806A128C0ECF800D26695 /* StartingStaff */ = {
+			isa = PBXGroup;
+			children = (
+				8E48069028C0D5F900D26695 /* AppStartCoordinator.swift */,
+				8E48069D28C0ECE600D26695 /* AppStartViewModel.swift */,
+				8E48069F28C0ECF300D26695 /* AppStartViewController.swift */,
+			);
+			path = StartingStaff;
+			sourceTree = "<group>";
+		};
+		8E4806A228C0ED0400D26695 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8E48069B28C0EB1900D26695 /* ServiceHolder.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E48067628C0D10F00D26695 /* Cocktail recipes app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E48068B28C0D11000D26695 /* Build configuration list for PBXNativeTarget "Cocktail recipes app" */;
+			buildPhases = (
+				8E48067328C0D10F00D26695 /* Sources */,
+				8E48067428C0D10F00D26695 /* Frameworks */,
+				8E48067528C0D10F00D26695 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cocktail recipes app";
+			productName = "Cocktail recipes app";
+			productReference = 8E48067728C0D10F00D26695 /* Cocktail recipes app.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E48066F28C0D10F00D26695 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					8E48067628C0D10F00D26695 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 8E48067228C0D10F00D26695 /* Build configuration list for PBXProject "Cocktail recipes app" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8E48066E28C0D10F00D26695;
+			productRefGroup = 8E48067828C0D10F00D26695 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E48067628C0D10F00D26695 /* Cocktail recipes app */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E48067528C0D10F00D26695 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E48068728C0D11000D26695 /* LaunchScreen.storyboard in Resources */,
+				8E48068428C0D11000D26695 /* Assets.xcassets in Resources */,
+				8E48068228C0D10F00D26695 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E48067328C0D10F00D26695 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E48069928C0EACF00D26695 /* UIView.swift in Sources */,
+				8E48069728C0EAC700D26695 /* UIViewController.swift in Sources */,
+				8E4806A028C0ECF300D26695 /* AppStartViewController.swift in Sources */,
+				8E48069528C0EABD00D26695 /* UIStoryboardExtensions.swift in Sources */,
+				8E48068F28C0D40E00D26695 /* AppCoordinator.swift in Sources */,
+				8E48069328C0EA9800D26695 /* ReuseIdentifiers.swift in Sources */,
+				8E48069128C0D5F900D26695 /* AppStartCoordinator.swift in Sources */,
+				8E48067B28C0D10F00D26695 /* AppDelegate.swift in Sources */,
+				8E48067D28C0D10F00D26695 /* SceneDelegate.swift in Sources */,
+				8E48069C28C0EB1900D26695 /* ServiceHolder.swift in Sources */,
+				8E48069E28C0ECE600D26695 /* AppStartViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8E48068028C0D10F00D26695 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E48068128C0D10F00D26695 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8E48068528C0D11000D26695 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E48068628C0D11000D26695 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E48068928C0D11000D26695 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8E48068A28C0D11000D26695 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8E48068C28C0D11000D26695 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZWR98HWWNA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Cocktail recipes app/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ua.kr.onix.Cocktail-recipes-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E48068D28C0D11000D26695 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZWR98HWWNA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Cocktail recipes app/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ua.kr.onix.Cocktail-recipes-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E48067228C0D10F00D26695 /* Build configuration list for PBXProject "Cocktail recipes app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E48068928C0D11000D26695 /* Debug */,
+				8E48068A28C0D11000D26695 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E48068B28C0D11000D26695 /* Build configuration list for PBXNativeTarget "Cocktail recipes app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E48068C28C0D11000D26695 /* Debug */,
+				8E48068D28C0D11000D26695 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E48066F28C0D10F00D26695 /* Project object */;
+}
