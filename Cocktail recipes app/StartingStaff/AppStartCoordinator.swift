@@ -14,7 +14,7 @@ protocol AppStartCoordinatorType {
     
 }
 
-class AppStartCoordinator {
+class AppStartCoordinator: AppStartCoordinatorType {
     private weak var controller = Storyboard.main.controller(withClass: AppStartViewController.self)
     private weak var navController: UINavigationController?
     private weak var transitions: AppStartCoordinatorTransitions?
@@ -24,11 +24,11 @@ class AppStartCoordinator {
         self.navController = navController
         self.transitions = transitions
         self.serviceHolder = serviceHolder
-        controller?.viewModel = AppStartViewModel(self, serviceHolder: serviceHolder)
+        controller?.viewModel = AppStartViewModel(self)
     }
     
     deinit {
-        print("GamesMenuCoord - deinit")
+        print("AppStart - deinit")
     }
     
     func start() {

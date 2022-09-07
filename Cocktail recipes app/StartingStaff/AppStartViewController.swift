@@ -10,6 +10,10 @@ import UIKit
 
 class AppStartViewController: UIViewController {
     
-    var viewModel: AppStartViewModel?
+    var viewModel: AppStartViewModelType?
     
+    override func viewDidLoad() {
+        guard let viewModel = viewModel else { return }
+        viewModel.getRequest()
+    }
 }

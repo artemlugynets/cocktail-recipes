@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8E48067B28C0D10F00D26695 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48067A28C0D10F00D26695 /* AppDelegate.swift */; };
-		8E48067D28C0D10F00D26695 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48067C28C0D10F00D26695 /* SceneDelegate.swift */; };
 		8E48068228C0D10F00D26695 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48068028C0D10F00D26695 /* Main.storyboard */; };
 		8E48068428C0D11000D26695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E48068328C0D11000D26695 /* Assets.xcassets */; };
 		8E48068728C0D11000D26695 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48068528C0D11000D26695 /* LaunchScreen.storyboard */; };
@@ -21,12 +20,13 @@
 		8E48069C28C0EB1900D26695 /* ServiceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069B28C0EB1900D26695 /* ServiceHolder.swift */; };
 		8E48069E28C0ECE600D26695 /* AppStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069D28C0ECE600D26695 /* AppStartViewModel.swift */; };
 		8E4806A028C0ECF300D26695 /* AppStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069F28C0ECF300D26695 /* AppStartViewController.swift */; };
+		8E4806A628C5FBA900D26695 /* CocktailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4806A528C5FBA900D26695 /* CocktailResult.swift */; };
+		8E4806AF28C8D5BC00D26695 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4806AE28C8D5BC00D26695 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8E48067728C0D10F00D26695 /* Cocktail recipes app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cocktail recipes app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E48067A28C0D10F00D26695 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E48067C28C0D10F00D26695 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8E48068128C0D10F00D26695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E48068328C0D11000D26695 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E48068628C0D11000D26695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +40,8 @@
 		8E48069B28C0EB1900D26695 /* ServiceHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceHolder.swift; sourceTree = "<group>"; };
 		8E48069D28C0ECE600D26695 /* AppStartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewModel.swift; sourceTree = "<group>"; };
 		8E48069F28C0ECF300D26695 /* AppStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewController.swift; sourceTree = "<group>"; };
+		8E4806A528C5FBA900D26695 /* CocktailResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailResult.swift; sourceTree = "<group>"; };
+		8E4806AE28C8D5BC00D26695 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,12 +76,12 @@
 			children = (
 				8E48067A28C0D10F00D26695 /* AppDelegate.swift */,
 				8E48068E28C0D40E00D26695 /* AppCoordinator.swift */,
-				8E48067C28C0D10F00D26695 /* SceneDelegate.swift */,
 				8E4806A128C0ECF800D26695 /* StartingStaff */,
 				8E48068028C0D10F00D26695 /* Main.storyboard */,
 				8E48068328C0D11000D26695 /* Assets.xcassets */,
 				8E48068528C0D11000D26695 /* LaunchScreen.storyboard */,
 				8E48068828C0D11000D26695 /* Info.plist */,
+				8E4806A528C5FBA900D26695 /* CocktailResult.swift */,
 				8E4806A228C0ED0400D26695 /* Services */,
 				8E48069A28C0EAFA00D26695 /* Extensions */,
 			);
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				8E48069B28C0EB1900D26695 /* ServiceHolder.swift */,
+				8E4806AE28C8D5BC00D26695 /* NetworkManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -189,12 +192,13 @@
 				8E48069928C0EACF00D26695 /* UIView.swift in Sources */,
 				8E48069728C0EAC700D26695 /* UIViewController.swift in Sources */,
 				8E4806A028C0ECF300D26695 /* AppStartViewController.swift in Sources */,
+				8E4806AF28C8D5BC00D26695 /* NetworkManager.swift in Sources */,
 				8E48069528C0EABD00D26695 /* UIStoryboardExtensions.swift in Sources */,
 				8E48068F28C0D40E00D26695 /* AppCoordinator.swift in Sources */,
 				8E48069328C0EA9800D26695 /* ReuseIdentifiers.swift in Sources */,
 				8E48069128C0D5F900D26695 /* AppStartCoordinator.swift in Sources */,
 				8E48067B28C0D10F00D26695 /* AppDelegate.swift in Sources */,
-				8E48067D28C0D10F00D26695 /* SceneDelegate.swift in Sources */,
+				8E4806A628C5FBA900D26695 /* CocktailResult.swift in Sources */,
 				8E48069C28C0EB1900D26695 /* ServiceHolder.swift in Sources */,
 				8E48069E28C0ECE600D26695 /* AppStartViewModel.swift in Sources */,
 			);

@@ -21,8 +21,8 @@ class AppCoordinator {
     }
     
     private func start() {
-        startFlow()
         startInitialServices()
+        startFlow()
     }
     
     private func startFlow() {
@@ -53,7 +53,7 @@ class AppCoordinator {
 extension AppCoordinator {
     
     private func startInitialServices() {
-//        serviceHolder.add(BluetoothDiscoverServiceType.self, for: BluetoothDiscoverService())
+        serviceHolder.add(NetworkManagerType.self, for: NetworkManager())
     }
     
 }
