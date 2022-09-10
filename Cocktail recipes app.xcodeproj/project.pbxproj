@@ -12,16 +12,22 @@
 		8E48068428C0D11000D26695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E48068328C0D11000D26695 /* Assets.xcassets */; };
 		8E48068728C0D11000D26695 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E48068528C0D11000D26695 /* LaunchScreen.storyboard */; };
 		8E48068F28C0D40E00D26695 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48068E28C0D40E00D26695 /* AppCoordinator.swift */; };
-		8E48069128C0D5F900D26695 /* AppStartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069028C0D5F900D26695 /* AppStartCoordinator.swift */; };
 		8E48069328C0EA9800D26695 /* ReuseIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069228C0EA9800D26695 /* ReuseIdentifiers.swift */; };
 		8E48069528C0EABD00D26695 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069428C0EABD00D26695 /* UIStoryboardExtensions.swift */; };
 		8E48069728C0EAC700D26695 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069628C0EAC700D26695 /* UIViewController.swift */; };
 		8E48069928C0EACF00D26695 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069828C0EACF00D26695 /* UIView.swift */; };
 		8E48069C28C0EB1900D26695 /* ServiceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069B28C0EB1900D26695 /* ServiceHolder.swift */; };
-		8E48069E28C0ECE600D26695 /* AppStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069D28C0ECE600D26695 /* AppStartViewModel.swift */; };
-		8E4806A028C0ECF300D26695 /* AppStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069F28C0ECF300D26695 /* AppStartViewController.swift */; };
+		8E48069E28C0ECE600D26695 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069D28C0ECE600D26695 /* SearchViewModel.swift */; };
+		8E4806A028C0ECF300D26695 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48069F28C0ECF300D26695 /* SearchViewController.swift */; };
 		8E4806A628C5FBA900D26695 /* CocktailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4806A528C5FBA900D26695 /* CocktailResult.swift */; };
 		8E4806AF28C8D5BC00D26695 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4806AE28C8D5BC00D26695 /* NetworkManager.swift */; };
+		8E4806B128CCC11B00D26695 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4806B028CCC11B00D26695 /* TabBarCoordinator.swift */; };
+		8E4806B328CCC1E600D26695 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4806B228CCC1E600D26695 /* CustomNavigationController.swift */; };
+		8E4806B628CCC40400D26695 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4806B528CCC40400D26695 /* Enums.swift */; };
+		8E4806BA28CCCAA400D26695 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4806B928CCCAA400D26695 /* FavouritesViewController.swift */; };
+		8E4806BC28CCCAB500D26695 /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4806BB28CCCAB500D26695 /* FavouritesViewModel.swift */; };
+		8E4806BE28CCCAC900D26695 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4806BD28CCCAC900D26695 /* TableViewController.swift */; };
+		8E4806C028CCCAD300D26695 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4806BF28CCCAD300D26695 /* TableViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,16 +38,22 @@
 		8E48068628C0D11000D26695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E48068828C0D11000D26695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E48068E28C0D40E00D26695 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		8E48069028C0D5F900D26695 /* AppStartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartCoordinator.swift; sourceTree = "<group>"; };
 		8E48069228C0EA9800D26695 /* ReuseIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiers.swift; sourceTree = "<group>"; };
 		8E48069428C0EABD00D26695 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
 		8E48069628C0EAC700D26695 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		8E48069828C0EACF00D26695 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		8E48069B28C0EB1900D26695 /* ServiceHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceHolder.swift; sourceTree = "<group>"; };
-		8E48069D28C0ECE600D26695 /* AppStartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewModel.swift; sourceTree = "<group>"; };
-		8E48069F28C0ECF300D26695 /* AppStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewController.swift; sourceTree = "<group>"; };
+		8E48069D28C0ECE600D26695 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		8E48069F28C0ECF300D26695 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8E4806A528C5FBA900D26695 /* CocktailResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailResult.swift; sourceTree = "<group>"; };
 		8E4806AE28C8D5BC00D26695 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8E4806B028CCC11B00D26695 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		8E4806B228CCC1E600D26695 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		8E4806B528CCC40400D26695 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		8E4806B928CCCAA400D26695 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		8E4806BB28CCCAB500D26695 /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
+		8E4806BD28CCCAC900D26695 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		8E4806BF28CCCAD300D26695 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,9 @@
 		8E48066E28C0D10F00D26695 = {
 			isa = PBXGroup;
 			children = (
+				8E4806B828CCC9D000D26695 /* FavouritesScene */,
+				8E4806B728CCC9B300D26695 /* TableViewScenes */,
+				8E4806B428CCC1F700D26695 /* Entities */,
 				8E48067928C0D10F00D26695 /* Cocktail recipes app */,
 				8E48067828C0D10F00D26695 /* Products */,
 			);
@@ -76,12 +91,12 @@
 			children = (
 				8E48067A28C0D10F00D26695 /* AppDelegate.swift */,
 				8E48068E28C0D40E00D26695 /* AppCoordinator.swift */,
-				8E4806A128C0ECF800D26695 /* StartingStaff */,
+				8E4806A128C0ECF800D26695 /* SearchViewScene */,
 				8E48068028C0D10F00D26695 /* Main.storyboard */,
 				8E48068328C0D11000D26695 /* Assets.xcassets */,
 				8E48068528C0D11000D26695 /* LaunchScreen.storyboard */,
 				8E48068828C0D11000D26695 /* Info.plist */,
-				8E4806A528C5FBA900D26695 /* CocktailResult.swift */,
+				8E4806B028CCC11B00D26695 /* TabBarCoordinator.swift */,
 				8E4806A228C0ED0400D26695 /* Services */,
 				8E48069A28C0EAFA00D26695 /* Extensions */,
 			);
@@ -99,14 +114,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		8E4806A128C0ECF800D26695 /* StartingStaff */ = {
+		8E4806A128C0ECF800D26695 /* SearchViewScene */ = {
 			isa = PBXGroup;
 			children = (
-				8E48069028C0D5F900D26695 /* AppStartCoordinator.swift */,
-				8E48069D28C0ECE600D26695 /* AppStartViewModel.swift */,
-				8E48069F28C0ECF300D26695 /* AppStartViewController.swift */,
+				8E48069D28C0ECE600D26695 /* SearchViewModel.swift */,
+				8E48069F28C0ECF300D26695 /* SearchViewController.swift */,
 			);
-			path = StartingStaff;
+			path = SearchViewScene;
 			sourceTree = "<group>";
 		};
 		8E4806A228C0ED0400D26695 /* Services */ = {
@@ -116,6 +130,34 @@
 				8E4806AE28C8D5BC00D26695 /* NetworkManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		8E4806B428CCC1F700D26695 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8E4806B228CCC1E600D26695 /* CustomNavigationController.swift */,
+				8E4806A528C5FBA900D26695 /* CocktailResult.swift */,
+				8E4806B528CCC40400D26695 /* Enums.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8E4806B728CCC9B300D26695 /* TableViewScenes */ = {
+			isa = PBXGroup;
+			children = (
+				8E4806BD28CCCAC900D26695 /* TableViewController.swift */,
+				8E4806BF28CCCAD300D26695 /* TableViewModel.swift */,
+			);
+			path = TableViewScenes;
+			sourceTree = "<group>";
+		};
+		8E4806B828CCC9D000D26695 /* FavouritesScene */ = {
+			isa = PBXGroup;
+			children = (
+				8E4806B928CCCAA400D26695 /* FavouritesViewController.swift */,
+				8E4806BB28CCCAB500D26695 /* FavouritesViewModel.swift */,
+			);
+			path = FavouritesScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,16 +233,22 @@
 			files = (
 				8E48069928C0EACF00D26695 /* UIView.swift in Sources */,
 				8E48069728C0EAC700D26695 /* UIViewController.swift in Sources */,
-				8E4806A028C0ECF300D26695 /* AppStartViewController.swift in Sources */,
+				8E4806BE28CCCAC900D26695 /* TableViewController.swift in Sources */,
+				8E4806A028C0ECF300D26695 /* SearchViewController.swift in Sources */,
+				8E4806BA28CCCAA400D26695 /* FavouritesViewController.swift in Sources */,
 				8E4806AF28C8D5BC00D26695 /* NetworkManager.swift in Sources */,
 				8E48069528C0EABD00D26695 /* UIStoryboardExtensions.swift in Sources */,
 				8E48068F28C0D40E00D26695 /* AppCoordinator.swift in Sources */,
+				8E4806B328CCC1E600D26695 /* CustomNavigationController.swift in Sources */,
+				8E4806BC28CCCAB500D26695 /* FavouritesViewModel.swift in Sources */,
+				8E4806B628CCC40400D26695 /* Enums.swift in Sources */,
+				8E4806B128CCC11B00D26695 /* TabBarCoordinator.swift in Sources */,
 				8E48069328C0EA9800D26695 /* ReuseIdentifiers.swift in Sources */,
-				8E48069128C0D5F900D26695 /* AppStartCoordinator.swift in Sources */,
 				8E48067B28C0D10F00D26695 /* AppDelegate.swift in Sources */,
 				8E4806A628C5FBA900D26695 /* CocktailResult.swift in Sources */,
+				8E4806C028CCCAD300D26695 /* TableViewModel.swift in Sources */,
 				8E48069C28C0EB1900D26695 /* ServiceHolder.swift in Sources */,
-				8E48069E28C0ECE600D26695 /* AppStartViewModel.swift in Sources */,
+				8E48069E28C0ECE600D26695 /* SearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

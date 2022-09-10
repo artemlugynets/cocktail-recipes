@@ -7,12 +7,11 @@
 
 import Foundation
 
-protocol AppStartViewModelType {
+protocol SearchViewModelType {
     func getRequest()
 }
 
-class AppStartViewModel: AppStartViewModelType {
-    private let coordinator: AppStartCoordinatorType
+class SearchViewModel: SearchViewModelType {
     private var networkService: NetworkManagerType
     
     var categories: Categories?
@@ -20,8 +19,7 @@ class AppStartViewModel: AppStartViewModelType {
     // example of service init
 //    private let analyticsService = AnalyticsService.shared
     
-    init(_ coordinator: AppStartCoordinatorType) {
-        self.coordinator = coordinator
+    init() {
         networkService = ServiceHolder.shared.get(by: NetworkManagerType.self)
 //        self.remoteConfigService = serviceHolder.get(by: RemoteConfigType.self)
     }
@@ -32,7 +30,9 @@ class AppStartViewModel: AppStartViewModelType {
             print(self.categories)
         }
     }
-    
+}
+
+extension SearchViewModel {
     private func sortedCategory(from categories: Categories) -> Categories {
         let drinks = categories.drinks.sorted { $0.strCategory < $1.strCategory }
         return Categories(drinks: drinks)

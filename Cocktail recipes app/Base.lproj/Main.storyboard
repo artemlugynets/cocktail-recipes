@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p5W-Bu-FYN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fFD-of-I0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -11,7 +11,7 @@
         <!--MENU-->
         <scene sceneID="Gej-Rd-vqe">
             <objects>
-                <viewController storyboardIdentifier="AppStartViewController" id="fFD-of-I0r" customClass="AppStartViewController" customModule="Cocktail_recipes_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AppStartViewController" id="fFD-of-I0r" customClass="SearchViewController" customModule="Cocktail_recipes_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M87-OT-xjr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,6 +55,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CnY-mE-udw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-303" y="368"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FEY-Kd-9IZ">
+            <objects>
+                <viewController id="HRS-2B-295" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VfR-VE-vrh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="noD-dV-vXx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QKN-a5-Tkg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2457" y="-505"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IkV-Vc-NMQ">

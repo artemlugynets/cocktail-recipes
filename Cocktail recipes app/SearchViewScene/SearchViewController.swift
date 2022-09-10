@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class AppStartViewController: UIViewController {
+class SearchViewController: UIViewController {
     
-    var viewModel: AppStartViewModelType?
+    var viewModel: SearchViewModelType?
     
     override func viewDidLoad() {
         guard let viewModel = viewModel else { return }
