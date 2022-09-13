@@ -10,10 +10,10 @@ import UIKit
 
 class AppCoordinator {
     private let window: UIWindow
-    private let nav = UINavigationController()
+    private let nav = CustomNavigationController()
     private let serviceHolder = ServiceHolder.shared.self
     
-    private weak var appStartCoord: AppStartCoordinator?
+    private weak var appStartCoord: TabBarCoordinator?
     
     init(window: UIWindow) {
         self.window = window
@@ -42,7 +42,7 @@ class AppCoordinator {
 }
     
     private func enterApp() {
-        let coord = AppStartCoordinator(navController: nav, transitions: nil, serviceHolder: serviceHolder)
+        let coord = TabBarCoordinator(navigationController: nav, service: serviceHolder)
         coord.start()
         
         appStartCoord = coord

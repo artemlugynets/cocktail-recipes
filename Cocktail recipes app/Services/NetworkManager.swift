@@ -9,6 +9,9 @@ import Foundation
 
 protocol NetworkManagerType: AnyObject, Service {
     func fetchCategories(completion: @escaping (_ drinks: Categories) -> Void)
+    func fetchIngredients(completion: @escaping (_ drinks: Ingredients) -> Void)
+    func fetchDrinkDetails(for id: String, completion: @escaping (_ list: CocktailDetails) -> Void)
+    func fetchImage(from url: URL, completion: @escaping (_ data: Data) -> Void) -> URLSessionDataTask?
 }
 
 class NetworkManager: NetworkManagerType {

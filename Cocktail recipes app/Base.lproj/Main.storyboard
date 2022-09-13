@@ -56,22 +56,6 @@
             </objects>
             <point key="canvasLocation" x="-303" y="368"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="FEY-Kd-9IZ">
-            <objects>
-                <viewController id="HRS-2B-295" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VfR-VE-vrh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="noD-dV-vXx"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QKN-a5-Tkg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2457" y="-505"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IkV-Vc-NMQ">
             <objects>

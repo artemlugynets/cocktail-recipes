@@ -9,25 +9,33 @@ import Foundation
 import UIKit
 
 protocol MainCoordinator: AnyObject {
-    var tabBarController: UITabBarController? { get set }
+    var myTabBarController: UITabBarController? { get set }
     func start()
-//    func openCoctailList(for category: String, typeOfCocktailList: TypeOfCocktailsList)
+    func openCoctailList(for category: String, typeOfCocktailList: TypeOfCocktailsList)
 }
 
 class TabBarCoordinator: MainCoordinator {
     
-    var tabBarController: UITabBarController?
+    var myTabBarController: UITabBarController?
+    
+    private var serviceHolder: ServiceHolder
+    private var navigationController: CustomNavigationController
+    
+    init(navigationController: CustomNavigationController, service: ServiceHolder) {
+        self.serviceHolder = service
+        self.navigationController = navigationController
+    }
     
     func start() {
-        tabBarController?.tabBar.backgroundColor = .white
-        tabBarController?.tabBar.tintColor = .blue
-        tabBarController?.tabBar.isTranslucent = true
+        myTabBarController?.tabBar.backgroundColor = .white
+        myTabBarController?.tabBar.tintColor = .blue
+        myTabBarController?.tabBar.isTranslucent = true
         
-//        let categoryVC = returnCategoryList()
-//        categoryVC.tabBarItem = UITabBarItem(title: "Category", image: UIImage(systemName: "list.dash"), tag: 0)
+        let categoryVC = returnCategoriesList()
+        categoryVC.tabBarItem = UITabBarItem(title: "Categories", image: UIImage(systemName: "list.dash"), tag: 0)
         
-//        let alcoVC = returnAlcoList()
-//        alcoVC.tabBarItem = UITabBarItem(title: "Ingredients", image: UIImage(systemName: "drop"), tag: 1)
+        let ingredientsVC = returnIngredientsList()
+        ingredientsVC.tabBarItem = UITabBarItem(title: "Ingredients", image: UIImage(systemName: "drop"), tag: 1)
 //
 //        let searchVC = returnSearchVC()
 //        searchVC.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass.circle.fill"), tag: 2)
@@ -37,9 +45,13 @@ class TabBarCoordinator: MainCoordinator {
 //        tabBarController?.viewControllers = [categoryVC, alcoVC, searchVC]
     }
     
-//    private func returnMainList() -> UIViewController {
-//
-//    }
+    private func returnCategoriesList() -> UIViewController {
+
+    }
+    
+    private func returnIngredientsList() -> UIViewController {
+        
+    }
 //
 //    private func returnSearchViewController() -> UIViewController {
 //        let navigationController = CustomNavigationController()
@@ -56,15 +68,15 @@ class TabBarCoordinator: MainCoordinator {
 //
 //    }
 //
-//    func openCoctailList(for category: String, typeOfCocktailList: TypeOfCocktailsList) {
-//        let coctailListVC = CocktailListViewController()
-//        let cocktailListVM = CocktailListViewModel(for: category, typeOfList: typeOfCocktailList)
-//        cocktailListVM.coordinator = self
-//        coctailListVC.cocktailListViewModel = cocktailListVM
-//        let selectedVC = tabBarController?.selectedViewController
-//        guard let selectedVC = selectedVC as? CustomNavigationController else { return }
-//        selectedVC.pushViewController(coctailListVC, animated: true)
-//    }
+    func openCoctailList(for category: String, typeOfCocktailList: TypeOfCocktailsList) {
+        let coctailListVC = CocktailListViewController()
+        let cocktailListVM = CocktailListViewModel(for: category, typeOfList: typeOfCocktailList)
+        cocktailListVM.coordinator = self
+        coctailListVC.cocktailListViewModel = cocktailListVM
+        let selectedVC = myTabBarController?.selectedViewController
+        guard let selectedVC = selectedVC as? CustomNavigationController else { return }
+        selectedVC.pushViewController(coctailListVC, animated: true)
+    }
     
     
 }
