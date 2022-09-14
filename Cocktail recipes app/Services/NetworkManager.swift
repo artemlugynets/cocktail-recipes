@@ -12,6 +12,8 @@ protocol NetworkManagerType: AnyObject, Service {
     func fetchIngredients(completion: @escaping (_ drinks: Ingredients) -> Void)
     func fetchDrinkDetails(for id: String, completion: @escaping (_ list: CocktailDetails) -> Void)
     func fetchImage(from url: URL, completion: @escaping (_ data: Data) -> Void) -> URLSessionDataTask?
+    func fetchList(for category: String, completion: @escaping (_ list: CocktailsList) -> Void)
+    func fetchIngredientList(for ingredient: String, completion: @escaping (_ list: CocktailsList) -> Void)
 }
 
 class NetworkManager: NetworkManagerType {
