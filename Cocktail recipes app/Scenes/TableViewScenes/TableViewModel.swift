@@ -25,9 +25,9 @@ class TableViewModel: TableViewModelType {
     private var categories: Categories?
     private var network: NetworkManagerType
     
-    init(typeOfTable: TypeOfTable, service: ServiceHolder) {
+    init(typeOfTable: TypeOfTable) {
         self.typeOfTable = typeOfTable
-        self.network = service.get(by: NetworkManagerType.self)
+        self.network = ServiceHolder.shared.get(by: NetworkManagerType.self)
     }
     
     func fetchDrink(completion: @escaping () -> Void) {

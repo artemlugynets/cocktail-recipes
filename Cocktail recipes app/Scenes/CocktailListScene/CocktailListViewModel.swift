@@ -24,10 +24,10 @@ class CocktailListViewModel: CocktailListViewModelType {
     private var cocktailList: CocktailsList?
     private var network: NetworkManagerType?
     
-    init(for category: String, typeOfList: TypeOfCocktailsList, serviceHolder: ServiceHolder) {
+    init(for category: String, typeOfList: TypeOfCocktailsList) {
         self.category = category
         self.typeOfCocktails = typeOfList
-        self.network = serviceHolder.get(by: NetworkManager.self)
+        self.network = ServiceHolder.shared.get(by: NetworkManagerType.self)
     }
     
     func fetchCocktailList(completion: @escaping () -> Void) {
@@ -65,6 +65,6 @@ class CocktailListViewModel: CocktailListViewModelType {
     }
     
     func cellDidTap(at indexPath: IndexPath) {
-        //
+        
     }
 }

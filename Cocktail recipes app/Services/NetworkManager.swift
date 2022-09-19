@@ -14,6 +14,7 @@ protocol NetworkManagerType: AnyObject, Service {
     func fetchImage(from url: URL, completion: @escaping (_ data: Data) -> Void) -> URLSessionDataTask?
     func fetchList(for category: String, completion: @escaping (_ list: CocktailsList) -> Void)
     func fetchIngredientList(for ingredient: String, completion: @escaping (_ list: CocktailsList) -> Void)
+    func fetchSearchText(for text: String, from url: ApiUrl, completion: @escaping (_ list: CocktailSearch) -> Void)
 }
 
 class NetworkManager: NetworkManagerType {
@@ -99,31 +100,6 @@ func fetchDrinksByIds(from ids: [Int], completion: @escaping (_ drinks: [Cocktai
                 completion(details)
             } else {
                 details.append(detail)
-            }
-        }
-    }
-}
-
-
-func fetchRandomDrink(completion: @escaping (_ list: CocktailDetails) -> Void) {
-    guard let url = URL(string: ApiUrl.random.rawValue) else {
-        print("No detail URL")
-        return
-    }
-    fetchModels(from: url, in: completion)
-}
-
-func fetchIds(completion: @escaping (_ ids: [Int]) -> Void) {
-    var ids: [Int] = []
-    var counter = 0
-    while counter < 25 {
-        counter += 1
-        fetchRandomDrink { list in
-            if ids.count == 24 {
-                ids.append((Int(list.drinks.first?.idDrink ?? "0")) ?? 0)
-                completion(ids)
-            } else {
-                ids.append((Int(list.drinks.first?.idDrink ?? "0")) ?? 0)
             }
         }
     }

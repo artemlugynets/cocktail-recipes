@@ -7,34 +7,73 @@
 
 import Foundation
 
-protocol SearchViewModelType {
-    func getRequest()
+protocol SearchViewModelType: TableViewModelType {
+    func searchBarTextDidChange(text: String)
+    var reloadTable: (() -> Void)? { get set }
 }
 
 class SearchViewModel: SearchViewModelType {
-    private var networkService: NetworkManagerType
     
-    var categories: Categories?
+    private var network: NetworkManagerType
     
-    // example of service init
-//    private let analyticsService = AnalyticsService.shared
+    var reloadTable: (() -> Void)?
+    
+    private var cocktailsList: CocktailSearch?
+    weak var coordinator: MainCoordinator?
     
     init() {
-        networkService = ServiceHolder.shared.get(by: NetworkManagerType.self)
-//        self.remoteConfigService = serviceHolder.get(by: RemoteConfigType.self)
+        network = ServiceHolder.shared.get(by: NetworkManagerType.self)
     }
     
-    func getRequest() {
-        networkService.fetchCategories { drinks in
-            self.categories = self.sortedCategory(from: drinks)
-            print(self.categories)
+    func fetchDrink(completion: @escaping () -> Void) {
+        completion()
+    }
+    
+    func getNavigationTitle() -> String {
+        ""
+    }
+    
+    func getNumberOfRows() -> Int {
+        cocktailsList?.drinks?.count ?? 0
+    }
+    
+    func getDrinkCellCategory(at index: IndexPath) -> String {
+        cocktailsList?.drinks?[index.row].strDrink ?? ""
+    }
+    
+    func cellDidSelect(at index: IndexPath) {
+        if let cocktailId = cocktailsList?.drinks?[index.row].idDrink {
+            coordinator?.openSingleCocktailView(for: cocktailId)
         }
     }
 }
 
 extension SearchViewModel {
-    private func sortedCategory(from categories: Categories) -> Categories {
-        let drinks = categories.drinks.sorted { $0.strCategory < $1.strCategory }
-        return Categories(drinks: drinks)
+    func searchBarTextDidChange(text: String) {
+        let searchText = getSearchText(from: text)
+        if text.isEmpty {
+            cocktailsList = nil
+            reloadTable?()
+        } else {
+            if text.count == 1 {
+                network.fetchSearchText(for: searchText, from: .searchOneSymbol) { list in
+                    self.cocktailsList = list
+                    self.reloadTable?()
+                }
+            } else {
+                network.fetchSearchText(for: searchText, from: .searchTwoAndMoreSymbols) { list in
+                    self.cocktailsList = list
+                    self.reloadTable?()
+                }
+            }
+        }
+    }
+    
+    private func getSearchText(from text: String) -> String {
+        return text
+            .replacingOccurrences(of: " ", with: "+")
+            .lowercased()
+            .applyingTransform(.toLatin, reverse: false)?
+            .applyingTransform(.stripDiacritics, reverse: false) ?? ""
     }
 }

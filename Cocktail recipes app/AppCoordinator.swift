@@ -11,6 +11,7 @@ import UIKit
 class AppCoordinator {
     private let window: UIWindow
     private let nav = CustomNavigationController()
+    private let tabBar = UITabBarController()
     private let serviceHolder = ServiceHolder.shared.self
     
     private weak var appStartCoord: TabBarCoordinator?
@@ -26,7 +27,7 @@ class AppCoordinator {
     }
     
     private func startFlow() {
-        window.rootViewController = nav
+        window.rootViewController = tabBar
         window.makeKeyAndVisible()
         
         //debug for checkers screen
@@ -43,6 +44,7 @@ class AppCoordinator {
     
     private func enterApp() {
         let coord = TabBarCoordinator(navigationController: nav, service: serviceHolder)
+        coord.myTabBarController = tabBar
         coord.start()
         
         appStartCoord = coord
