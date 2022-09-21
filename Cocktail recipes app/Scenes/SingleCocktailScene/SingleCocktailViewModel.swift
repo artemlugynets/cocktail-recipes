@@ -22,12 +22,14 @@ class SingleCocktailViewModel {
     init(for drinkID: String) {
         self.drinkId = drinkID
         self.network = ServiceHolder.shared.get(by: NetworkManagerType.self)
+        fetchCocktailDetail()
     }
     
     private func fetchCocktailDetail() {
         network.fetchDrinkDetails(for: drinkId) { data in
             self.cocktailDetailModel = data
-            
+            self.getAttributedStrings()
+            self.fetchDrinkImage()
         }
     }
     

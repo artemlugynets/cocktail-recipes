@@ -8,9 +8,11 @@
 import Foundation
 import UIKit
 
-class SearchViewController: TableViewController, UISearchBarDelegate {
-    
-    var viewModel: SearchViewModelType?
+protocol SearchVCDelegate: AnyObject {
+   func tableViewReload()
+}
+
+class SearchViewController: TableViewController, UISearchBarDelegate, SearchVCDelegate {
     
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar(frame: CGRect(
@@ -48,9 +50,12 @@ class SearchViewController: TableViewController, UISearchBarDelegate {
         let searchBarItem = UIBarButtonItem(customView: searchBar)
         navigationItem.leftBarButtonItem = searchBarItem
         tableView.keyboardDismissMode = .onDrag
-        viewModel?.reloadTable = { [weak self] in
-            self?.tableView.reloadData()
-        }
+        view.backgroundColor = .white
+        tableView.backgroundColor = .black
+//        searchViewModel?.reloadTable = { [weak self] in
+//            self?.tableView.reloadData()
+//            print("table reloaded")
+//        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -60,6 +65,10 @@ class SearchViewController: TableViewController, UISearchBarDelegate {
 }
 
 extension SearchViewController {
+    func tableViewReload() {
+        tableView.reloadData()
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchViewModel?.searchBarTextDidChange(text: searchText)
     }

@@ -52,7 +52,8 @@ class SingleCocktailViewController: UIViewController, SingleCocktailType {
     
     private lazy var discriptionView: UIScrollView = {
         let discriptionView = UIScrollView()
-        discriptionView.isScrollEnabled = false
+        discriptionView.isScrollEnabled = true
+        discriptionView.showsVerticalScrollIndicator = false
         return discriptionView
     }()
     
@@ -85,22 +86,21 @@ class SingleCocktailViewController: UIViewController, SingleCocktailType {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
-        view.addSubview(drinkImage)
+//        view.addSubview(drinkImage)
+        view.addSubview(discriptionView)
         drinkImage.addSubview(placeholderImage)
         discriptionView.addSubview(insideView)
+        insideView.addSubview(drinkImage)
         insideView.addSubview(cocktailNameLabel)
         insideView.addSubview(textView)
-        view.addSubview(discriptionView)
+//        setupConstraint()
+        setupImageInScrollView()
     }
     
     
 }
 
 extension SingleCocktailViewController {
-    private func setupLayout() {
-        
-    }
-    
     private func setupConstraint() {
         drinkImage.translatesAutoresizingMaskIntoConstraints = false
         discriptionView.translatesAutoresizingMaskIntoConstraints = false
@@ -108,10 +108,11 @@ extension SingleCocktailViewController {
         textView.translatesAutoresizingMaskIntoConstraints = false
         cocktailNameLabel.translatesAutoresizingMaskIntoConstraints = false
         placeholderImage.translatesAutoresizingMaskIntoConstraints = false
+        let margins = view.layoutMarginsGuide
         
         NSLayoutConstraint.activate([
             drinkImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            drinkImage.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: view.bounds.height * -0.1),
+            drinkImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 90),
             drinkImage.widthAnchor.constraint(equalToConstant: view.bounds.width * 0.9),
             drinkImage.heightAnchor.constraint(equalTo: drinkImage.widthAnchor),
             
@@ -119,7 +120,8 @@ extension SingleCocktailViewController {
             insideView.leftAnchor.constraint(equalTo: discriptionView.leftAnchor),
             insideView.bottomAnchor.constraint(equalTo: discriptionView.bottomAnchor),
             insideView.rightAnchor.constraint(equalTo: discriptionView.rightAnchor),
-            insideView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            insideView.widthAnchor.constraint(equalTo: discriptionView.widthAnchor),
+            insideView.heightAnchor.constraint(equalToConstant: 400),
 
             cocktailNameLabel.topAnchor.constraint(equalTo: insideView.topAnchor),
             cocktailNameLabel.leftAnchor.constraint(equalTo: insideView.leftAnchor, constant: 16),
@@ -135,8 +137,55 @@ extension SingleCocktailViewController {
             placeholderImage.heightAnchor.constraint(equalToConstant: 150),
             placeholderImage.widthAnchor.constraint(equalToConstant: 150),
             
-            discriptionView.heightAnchor.constraint(equalToConstant: 1000),
-            discriptionView.widthAnchor.constraint(equalTo: view.widthAnchor)
+            discriptionView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            discriptionView.topAnchor.constraint(equalTo: drinkImage.bottomAnchor, constant: 10),
+            discriptionView.bottomAnchor.constraint(equalTo: margins.bottomAnchor)
+//            discriptionView.heightAnchor.constraint(equalToConstant: 1000)
+        ])
+    }
+    
+    private func setupImageInScrollView() {
+        drinkImage.translatesAutoresizingMaskIntoConstraints = false
+        discriptionView.translatesAutoresizingMaskIntoConstraints = false
+        insideView.translatesAutoresizingMaskIntoConstraints = false
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        cocktailNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        placeholderImage.translatesAutoresizingMaskIntoConstraints = false
+//        let margins = view.layoutMarginsGuide
+        
+        NSLayoutConstraint.activate([
+            discriptionView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            discriptionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            discriptionView.widthAnchor.constraint(equalToConstant: view.bounds.width * 0.9),
+            discriptionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            insideView.topAnchor.constraint(equalTo: discriptionView.topAnchor, constant: 0),
+            insideView.leftAnchor.constraint(equalTo: discriptionView.leftAnchor),
+            insideView.bottomAnchor.constraint(equalTo: discriptionView.bottomAnchor),
+            insideView.rightAnchor.constraint(equalTo: discriptionView.rightAnchor),
+            insideView.widthAnchor.constraint(equalTo: discriptionView.widthAnchor),
+            insideView.heightAnchor.constraint(equalToConstant: view.bounds.height + 150),
+            
+            drinkImage.centerXAnchor.constraint(equalTo: insideView.centerXAnchor),
+            drinkImage.topAnchor.constraint(equalTo: insideView.topAnchor, constant: 0),
+            drinkImage.widthAnchor.constraint(equalTo: insideView.widthAnchor),
+            drinkImage.heightAnchor.constraint(equalTo: drinkImage.widthAnchor),
+
+            cocktailNameLabel.topAnchor.constraint(equalTo: drinkImage.bottomAnchor, constant: 10),
+            cocktailNameLabel.leftAnchor.constraint(equalTo: insideView.leftAnchor, constant: 16),
+            cocktailNameLabel.rightAnchor.constraint(equalTo: insideView.rightAnchor, constant: -16),
+            
+            textView.topAnchor.constraint(equalTo: cocktailNameLabel.bottomAnchor, constant: 10),
+            textView.leftAnchor.constraint(equalTo: insideView.leftAnchor, constant: 16),
+            textView.rightAnchor.constraint(equalTo: insideView.rightAnchor, constant: -16),
+            textView.heightAnchor.constraint(lessThanOrEqualToConstant: 350),
+            
+            placeholderImage.centerXAnchor.constraint(equalTo: drinkImage.centerXAnchor),
+            placeholderImage.centerYAnchor.constraint(equalTo: drinkImage.centerYAnchor),
+            placeholderImage.heightAnchor.constraint(equalToConstant: 150),
+            placeholderImage.widthAnchor.constraint(equalToConstant: 150),
+
+//            discriptionView.heightAnchor.constraint(equalToConstant: 1000)
         ])
     }
 }

@@ -9,21 +9,20 @@ import Foundation
 
 protocol SearchViewModelType: TableViewModelType {
     func searchBarTextDidChange(text: String)
-    var reloadTable: (() -> Void)? { get set }
+//    var reloadTable: (() -> Void)? { get set }
 }
 
 class SearchViewModel: SearchViewModelType {
     
-    private var network: NetworkManagerType
-    
-    var reloadTable: (() -> Void)?
+    private var network: NetworkManagerType = ServiceHolder.shared.get(by: NetworkManagerType.self)
     
     private var cocktailsList: CocktailSearch?
     weak var coordinator: MainCoordinator?
+    weak var searchVC: SearchVCDelegate?
     
-    init() {
-        network = ServiceHolder.shared.get(by: NetworkManagerType.self)
-    }
+//    init() {
+//        network = ServiceHolder.shared.get(by: NetworkManagerType.self)
+//    }
     
     func fetchDrink(completion: @escaping () -> Void) {
         completion()
@@ -53,17 +52,20 @@ extension SearchViewModel {
         let searchText = getSearchText(from: text)
         if text.isEmpty {
             cocktailsList = nil
-            reloadTable?()
+            searchVC?.tableViewReload()
+//            self.reloadTable()
         } else {
             if text.count == 1 {
                 network.fetchSearchText(for: searchText, from: .searchOneSymbol) { list in
                     self.cocktailsList = list
-                    self.reloadTable?()
+//                    self.reloadTable?()
+                    self.searchVC?.tableViewReload()
                 }
             } else {
                 network.fetchSearchText(for: searchText, from: .searchTwoAndMoreSymbols) { list in
                     self.cocktailsList = list
-                    self.reloadTable?()
+//                    self.reloadTable?()
+                    self.searchVC?.tableViewReload()
                 }
             }
         }

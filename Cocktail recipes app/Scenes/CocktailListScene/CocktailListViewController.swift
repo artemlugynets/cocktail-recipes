@@ -12,7 +12,7 @@ class CocktailListViewController: UIViewController {
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        let width = UIScreen.main.bounds.width / 2
+        let width = UIScreen.main.bounds.width / 2.35
         let height = width * 1.25
         let insets = width / 8
         layout.sectionInset = UIEdgeInsets(top: insets, left: insets, bottom: insets, right: insets)

@@ -65,6 +65,7 @@ class CocktailListViewModel: CocktailListViewModelType {
     }
     
     func cellDidTap(at indexPath: IndexPath) {
-        
+        guard let cocktail = cocktailList?.drinks[indexPath.row].idDrink else { return }
+        coordinator?.openSingleCocktailView(for: cocktail)
     }
 }

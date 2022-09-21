@@ -71,7 +71,8 @@ class TabBarCoordinator: MainCoordinator {
         let searchVC = SearchViewController()
         let tableViewModel = SearchViewModel()
         tableViewModel.coordinator = self
-        searchVC.viewModel = tableViewModel
+        tableViewModel.searchVC = searchVC
+        searchVC.searchViewModel = tableViewModel
         navigationController.viewControllers = [searchVC]
         return navigationController
     }
